@@ -41,6 +41,8 @@ public class OrangeHrm {
 				cap.setPlatform(Platform.WIN11);
 			else if (os.equals("mac"))
 				cap.setPlatform(Platform.MAC);
+			else if (os.equals("linux"))
+				cap.setPlatform(Platform.LINUX);
 			else {
 				System.out.println("no matching os");
 				return;
@@ -49,6 +51,8 @@ public class OrangeHrm {
 				cap.setBrowserName("chrome");
 			else if (br.equals("edge"))
 				cap.setBrowserName("MicrosoftEdge");
+			else if (br.equals("firefox"))
+				cap.setBrowserName("firefox");
 
 			driver = new RemoteWebDriver(new URL("http://192.168.1.35:4444"), cap);
 		}

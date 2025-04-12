@@ -1,23 +1,124 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="0" failed="3" skipped="0">
+<testng-results ignored="0" total="4" passed="3" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-04-12T15:10:24 IST" name="Suite" finished-at="2025-04-12T15:10:24 IST" duration-ms="184">
+  <suite started-at="2025-04-12T18:09:48 IST" name="Suite" finished-at="2025-04-12T18:10:26 IST" duration-ms="38322">
     <groups>
+      <group name="regression">
+        <method signature="TC002_Verify_Login.loginTest()[pri:0, instance:testCases.TC002_Verify_Login@5542c4ed]" name="loginTest" class="testCases.TC002_Verify_Login"/>
+        <method signature="TC002_Verify_Login.loginTest()[pri:0, instance:testCases.TC002_Verify_Login@7817fd62]" name="loginTest" class="testCases.TC002_Verify_Login"/>
+      </group> <!-- regression -->
       <group name="sanity">
-        <method signature="TC001_Verify_Acc_Reg.verifyAccountReg()[pri:0, instance:testCases.TC001_Verify_Acc_Reg@2d1ef81a]" name="verifyAccountReg" class="testCases.TC001_Verify_Acc_Reg"/>
-        <method signature="TC001_Verify_Acc_Reg.verifyAccountReg()[pri:0, instance:testCases.TC001_Verify_Acc_Reg@5dda768f]" name="verifyAccountReg" class="testCases.TC001_Verify_Acc_Reg"/>
-        <method signature="TC001_Verify_Acc_Reg.verifyAccountReg()[pri:0, instance:testCases.TC001_Verify_Acc_Reg@24269709]" name="verifyAccountReg" class="testCases.TC001_Verify_Acc_Reg"/>
+        <method signature="TC001_Verify_Acc_Reg.verifyAccountReg()[pri:0, instance:testCases.TC001_Verify_Acc_Reg@5b12b668]" name="verifyAccountReg" class="testCases.TC001_Verify_Acc_Reg"/>
+        <method signature="TC001_Verify_Acc_Reg.verifyAccountReg()[pri:0, instance:testCases.TC001_Verify_Acc_Reg@510f3d34]" name="verifyAccountReg" class="testCases.TC001_Verify_Acc_Reg"/>
       </group> <!-- sanity -->
       <group name="master">
-        <method signature="TC001_Verify_Acc_Reg.verifyAccountReg()[pri:0, instance:testCases.TC001_Verify_Acc_Reg@2d1ef81a]" name="verifyAccountReg" class="testCases.TC001_Verify_Acc_Reg"/>
-        <method signature="TC001_Verify_Acc_Reg.verifyAccountReg()[pri:0, instance:testCases.TC001_Verify_Acc_Reg@5dda768f]" name="verifyAccountReg" class="testCases.TC001_Verify_Acc_Reg"/>
-        <method signature="TC001_Verify_Acc_Reg.verifyAccountReg()[pri:0, instance:testCases.TC001_Verify_Acc_Reg@24269709]" name="verifyAccountReg" class="testCases.TC001_Verify_Acc_Reg"/>
+        <method signature="TC001_Verify_Acc_Reg.verifyAccountReg()[pri:0, instance:testCases.TC001_Verify_Acc_Reg@5b12b668]" name="verifyAccountReg" class="testCases.TC001_Verify_Acc_Reg"/>
+        <method signature="TC002_Verify_Login.loginTest()[pri:0, instance:testCases.TC002_Verify_Login@5542c4ed]" name="loginTest" class="testCases.TC002_Verify_Login"/>
+        <method signature="TC001_Verify_Acc_Reg.verifyAccountReg()[pri:0, instance:testCases.TC001_Verify_Acc_Reg@510f3d34]" name="verifyAccountReg" class="testCases.TC001_Verify_Acc_Reg"/>
+        <method signature="TC002_Verify_Login.loginTest()[pri:0, instance:testCases.TC002_Verify_Login@7817fd62]" name="loginTest" class="testCases.TC002_Verify_Login"/>
       </group> <!-- master -->
     </groups>
-    <test started-at="2025-04-12T15:10:24 IST" name="Test2" finished-at="2025-04-12T15:10:24 IST" duration-ms="184">
+    <test started-at="2025-04-12T18:09:48 IST" name="Test firefox" finished-at="2025-04-12T18:10:13 IST" duration-ms="25533">
+      <class name="testCases.TC002_Verify_Login">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:testCases.TC002_Verify_Login@5542c4ed]" started-at="2025-04-12T18:09:58 IST" name="setUp" finished-at="2025-04-12T18:10:01 IST" duration-ms="3795" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[linux]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="loginTest()[pri:0, instance:testCases.TC002_Verify_Login@5542c4ed]" started-at="2025-04-12T18:10:01 IST" name="loginTest" finished-at="2025-04-12T18:10:13 IST" duration-ms="11332" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:1067)
+at org.testng.Assert.assertEquals(Assert.java:1031)
+at org.testng.Assert.assertEquals(Assert.java:1077)
+at testCases.TC002_Verify_Login.loginTest(TC002_Verify_Login.java:27)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTest -->
+        <test-method is-config="true" signature="tearEnd()[pri:0, instance:testCases.TC002_Verify_Login@5542c4ed]" started-at="2025-04-12T18:10:13 IST" name="tearEnd" finished-at="2025-04-12T18:10:13 IST" duration-ms="666" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearEnd -->
+      </class> <!-- testCases.TC002_Verify_Login -->
       <class name="testCases.TC001_Verify_Acc_Reg">
-        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:testCases.TC001_Verify_Acc_Reg@5dda768f]" started-at="2025-04-12T15:10:24 IST" name="setUp" finished-at="2025-04-12T15:10:24 IST" duration-ms="29" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:testCases.TC001_Verify_Acc_Reg@5b12b668]" started-at="2025-04-12T18:09:48 IST" name="setUp" finished-at="2025-04-12T18:09:54 IST" duration-ms="6271" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[linux]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyAccountReg()[pri:0, instance:testCases.TC001_Verify_Acc_Reg@5b12b668]" started-at="2025-04-12T18:09:54 IST" name="verifyAccountReg" finished-at="2025-04-12T18:09:57 IST" duration-ms="2428" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyAccountReg -->
+        <test-method is-config="true" signature="tearEnd()[pri:0, instance:testCases.TC001_Verify_Acc_Reg@5b12b668]" started-at="2025-04-12T18:09:57 IST" name="tearEnd" finished-at="2025-04-12T18:09:58 IST" duration-ms="812" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearEnd -->
+      </class> <!-- testCases.TC001_Verify_Acc_Reg -->
+    </test> <!-- Test firefox -->
+    <test started-at="2025-04-12T18:10:14 IST" name="Test Edge" finished-at="2025-04-12T18:10:26 IST" duration-ms="12136">
+      <class name="testCases.TC002_Verify_Login">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:testCases.TC002_Verify_Login@7817fd62]" started-at="2025-04-12T18:10:22 IST" name="setUp" finished-at="2025-04-12T18:10:24 IST" duration-ms="1842" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -33,84 +134,21 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifyAccountReg()[pri:0, instance:testCases.TC001_Verify_Acc_Reg@5dda768f]" started-at="2025-04-12T15:10:24 IST" name="verifyAccountReg" finished-at="2025-04-12T15:10:24 IST" duration-ms="78" status="FAIL">
-          <exception class="java.lang.NullPointerException">
-            <message>
-              <![CDATA[Cannot invoke "org.openqa.selenium.WebDriver.manage()" because "driver" is null]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.manage()" because "driver" is null
-at pageObjects.BasePage.<init>(BasePage.java:16)
-at pageObjects.HomePage.<init>(HomePage.java:10)
-at testCases.TC001_Verify_Acc_Reg.verifyAccountReg(TC001_Verify_Acc_Reg.java:15)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
-at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-at java.base/java.lang.Thread.run(Thread.java:1583)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+        <test-method signature="loginTest()[pri:0, instance:testCases.TC002_Verify_Login@7817fd62]" started-at="2025-04-12T18:10:24 IST" name="loginTest" finished-at="2025-04-12T18:10:25 IST" duration-ms="1657" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyAccountReg -->
-        <test-method is-config="true" signature="tearEnd()[pri:0, instance:testCases.TC001_Verify_Acc_Reg@5dda768f]" started-at="2025-04-12T15:10:24 IST" name="tearEnd" finished-at="2025-04-12T15:10:24 IST" duration-ms="1" status="FAIL">
-          <exception class="java.lang.NullPointerException">
-            <message>
-              <![CDATA[Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
-at tastBase.OrangeHrm.tearEnd(OrangeHrm.java:63)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
-at org.testng.internal.invokers.TestMethodWorker.invokeAfterClassConfigurations(TestMethodWorker.java:238)
-at org.testng.internal.invokers.TestMethodWorker.invokeAfterClassMethods(TestMethodWorker.java:223)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:137)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
-at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-at java.base/java.lang.Thread.run(Thread.java:1583)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+        </test-method> <!-- loginTest -->
+        <test-method is-config="true" signature="tearEnd()[pri:0, instance:testCases.TC002_Verify_Login@7817fd62]" started-at="2025-04-12T18:10:25 IST" name="tearEnd" finished-at="2025-04-12T18:10:26 IST" duration-ms="1086" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearEnd -->
-      </class> <!-- testCases.TC001_Verify_Acc_Reg -->
-    </test> <!-- Test2 -->
-    <test started-at="2025-04-12T15:10:24 IST" name="Test3" finished-at="2025-04-12T15:10:24 IST" duration-ms="184">
+      </class> <!-- testCases.TC002_Verify_Login -->
       <class name="testCases.TC001_Verify_Acc_Reg">
-        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:testCases.TC001_Verify_Acc_Reg@24269709]" started-at="2025-04-12T15:10:24 IST" name="setUp" finished-at="2025-04-12T15:10:24 IST" duration-ms="29" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:testCases.TC001_Verify_Acc_Reg@510f3d34]" started-at="2025-04-12T18:10:14 IST" name="setUp" finished-at="2025-04-12T18:10:18 IST" duration-ms="3812" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[chrome]]>
+                <![CDATA[edge]]>
               </value>
             </param>
             <param index="1">
@@ -122,165 +160,15 @@ at java.base/java.lang.Thread.run(Thread.java:1583)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifyAccountReg()[pri:0, instance:testCases.TC001_Verify_Acc_Reg@24269709]" started-at="2025-04-12T15:10:24 IST" name="verifyAccountReg" finished-at="2025-04-12T15:10:24 IST" duration-ms="78" status="FAIL">
-          <exception class="java.lang.NullPointerException">
-            <message>
-              <![CDATA[Cannot invoke "org.openqa.selenium.WebDriver.manage()" because "driver" is null]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.manage()" because "driver" is null
-at pageObjects.BasePage.<init>(BasePage.java:16)
-at pageObjects.HomePage.<init>(HomePage.java:10)
-at testCases.TC001_Verify_Acc_Reg.verifyAccountReg(TC001_Verify_Acc_Reg.java:15)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
-at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-at java.base/java.lang.Thread.run(Thread.java:1583)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+        <test-method signature="verifyAccountReg()[pri:0, instance:testCases.TC001_Verify_Acc_Reg@510f3d34]" started-at="2025-04-12T18:10:18 IST" name="verifyAccountReg" finished-at="2025-04-12T18:10:21 IST" duration-ms="2614" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyAccountReg -->
-        <test-method is-config="true" signature="tearEnd()[pri:0, instance:testCases.TC001_Verify_Acc_Reg@24269709]" started-at="2025-04-12T15:10:24 IST" name="tearEnd" finished-at="2025-04-12T15:10:24 IST" duration-ms="1" status="FAIL">
-          <exception class="java.lang.NullPointerException">
-            <message>
-              <![CDATA[Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
-at tastBase.OrangeHrm.tearEnd(OrangeHrm.java:63)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
-at org.testng.internal.invokers.TestMethodWorker.invokeAfterClassConfigurations(TestMethodWorker.java:238)
-at org.testng.internal.invokers.TestMethodWorker.invokeAfterClassMethods(TestMethodWorker.java:223)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:137)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
-at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-at java.base/java.lang.Thread.run(Thread.java:1583)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+        <test-method is-config="true" signature="tearEnd()[pri:0, instance:testCases.TC001_Verify_Acc_Reg@510f3d34]" started-at="2025-04-12T18:10:21 IST" name="tearEnd" finished-at="2025-04-12T18:10:22 IST" duration-ms="1116" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearEnd -->
       </class> <!-- testCases.TC001_Verify_Acc_Reg -->
-    </test> <!-- Test3 -->
-    <test started-at="2025-04-12T15:10:24 IST" name="Test1" finished-at="2025-04-12T15:10:24 IST" duration-ms="184">
-      <class name="testCases.TC001_Verify_Acc_Reg">
-        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:testCases.TC001_Verify_Acc_Reg@2d1ef81a]" started-at="2025-04-12T15:10:24 IST" name="setUp" finished-at="2025-04-12T15:10:24 IST" duration-ms="29" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[linux]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="verifyAccountReg()[pri:0, instance:testCases.TC001_Verify_Acc_Reg@2d1ef81a]" started-at="2025-04-12T15:10:24 IST" name="verifyAccountReg" finished-at="2025-04-12T15:10:24 IST" duration-ms="78" status="FAIL">
-          <exception class="java.lang.NullPointerException">
-            <message>
-              <![CDATA[Cannot invoke "org.openqa.selenium.WebDriver.manage()" because "driver" is null]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.manage()" because "driver" is null
-at pageObjects.BasePage.<init>(BasePage.java:16)
-at pageObjects.HomePage.<init>(HomePage.java:10)
-at testCases.TC001_Verify_Acc_Reg.verifyAccountReg(TC001_Verify_Acc_Reg.java:15)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
-at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-at java.base/java.lang.Thread.run(Thread.java:1583)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyAccountReg -->
-        <test-method is-config="true" signature="tearEnd()[pri:0, instance:testCases.TC001_Verify_Acc_Reg@2d1ef81a]" started-at="2025-04-12T15:10:24 IST" name="tearEnd" finished-at="2025-04-12T15:10:24 IST" duration-ms="1" status="FAIL">
-          <exception class="java.lang.NullPointerException">
-            <message>
-              <![CDATA[Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
-at tastBase.OrangeHrm.tearEnd(OrangeHrm.java:63)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
-at org.testng.internal.invokers.TestMethodWorker.invokeAfterClassConfigurations(TestMethodWorker.java:238)
-at org.testng.internal.invokers.TestMethodWorker.invokeAfterClassMethods(TestMethodWorker.java:223)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:137)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
-at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-at java.base/java.lang.Thread.run(Thread.java:1583)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearEnd -->
-      </class> <!-- testCases.TC001_Verify_Acc_Reg -->
-    </test> <!-- Test1 -->
+    </test> <!-- Test Edge -->
   </suite> <!-- Suite -->
 </testng-results>
