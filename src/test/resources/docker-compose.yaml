@@ -1,0 +1,57 @@
+version: '3'
+services:
+  selenium-hub:
+    image: selenium/hub
+    container_name: selenium-hub
+    ports:
+      - "4442:4442"   # Event Bus Publish
+      - "4443:4443"   # Event Bus Subscribe
+      - "4444:4444"   # Hub UI and WebDriver endpoint
+    networks:
+      - selenium-grid
+
+  chrome-node:
+    image: selenium/node-chrome
+    container_name: chrome-node
+    depends_on:
+      - selenium-hub
+    environment:
+      - SE_EVENT_BUS_HOST=selenium-hub
+      - SE_EVENT_BUS_PUBLISH_PORT=4442
+      - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
+    ports:
+      - "7900:7900"  # Optional: VNC
+    networks:
+      - selenium-grid
+
+  firefox-node:
+    image: selenium/node-firefox
+    container_name: firefox-node
+    depends_on:
+      - selenium-hub
+    environment:
+      - SE_EVENT_BUS_HOST=selenium-hub
+      - SE_EVENT_BUS_PUBLISH_PORT=4442
+      - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
+    ports:
+      - "7901:7900"  # Optional: VNC (mapped to a different local port to avoid conflict)
+    networks:
+      - selenium-grid
+
+  edge-node:
+    image: selenium/node-edge
+    container_name: edge-node
+    depends_on:
+      - selenium-hub
+    environment:
+      - SE_EVENT_BUS_HOST=selenium-hub
+      - SE_EVENT_BUS_PUBLISH_PORT=4442
+      - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
+    ports:
+      - "7902:7900"  # Optional: VNC (another unique port)
+    networks:
+      - selenium-grid
+
+networks:
+  selenium-grid:
+    driver: bridge
